@@ -24,8 +24,16 @@ public class UserRegistration {
 		String lastName = "[A-z]{1}[a-z]{2,}";
 		String inputLastName = scanner.next(); // Akhtar = ture, akhtar = false
 
+		/*
+		 * User need to enter a valid email to valid email is (abc.xyz@bl.co.in)
+		 */
+		System.out.println("Enter Email Id: ");
+		String emailId = "[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})";
+		String inputEmailId = scanner.next(); // me.nadeem@gmail.com = ture, me.nadeem55@gmail.com = false
+
 		UserRegistration userRegistration = new UserRegistration();
 		System.out.println(userRegistration.userName(firstName, input));
 		System.out.println(userRegistration.userName(lastName, inputLastName));
+		System.out.println(userRegistration.userName(emailId, inputEmailId));
 	}
 }
