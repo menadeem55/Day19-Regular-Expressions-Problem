@@ -40,11 +40,13 @@ public class UserRegistration {
 		String inputmobileNumber = scanner.next(); // 91-8826923224 = ture, 918826923224 = false
 
 		/*
-		 * As a user need to add Password rules At a minimum 8 characters
+		 * As a user need to add Password rules At a minimum 8 characters And maximum
+		 * any character
 		 */
 		System.out.println("Enter Password");
-		String Password = "[A-za-z0-9]{8}$";
-		String inputPassword = scanner.next(); // Asdfg12 = ture, asdfgh55 = false
+//		String Password = "[A-za-z0-9]{8}$";
+		String Password = "((?=.*[A-Z]).{8,})";
+		String inputPassword = scanner.next(); // Asdfg12124 = ture, asdfgh55 = false
 
 		UserRegistration userRegistration = new UserRegistration();
 		System.out.println(userRegistration.userName(firstName, input));
