@@ -39,10 +39,18 @@ public class UserRegistration {
 		String mobileNumber = "(91)(-)[6-9]{1}[0-9]{9}";
 		String inputmobileNumber = scanner.next(); // 91-8826923224 = ture, 918826923224 = false
 
+		/*
+		 * As a user need to add Password rules At a minimum 8 characters
+		 */
+		System.out.println("Enter Password");
+		String Password = "[A-za-z0-9]{8}$";
+		String inputPassword = scanner.next(); // Asdfg12 = ture, asdfgh55 = false
+
 		UserRegistration userRegistration = new UserRegistration();
 		System.out.println(userRegistration.userName(firstName, input));
 		System.out.println(userRegistration.userName(lastName, inputLastName));
 		System.out.println(userRegistration.userName(emailId, inputEmailId));
 		System.out.println(userRegistration.userName(mobileNumber, inputmobileNumber));
+		System.out.println(userRegistration.userName(Password, inputPassword));
 	}
 }
