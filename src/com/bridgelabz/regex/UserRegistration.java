@@ -41,12 +41,14 @@ public class UserRegistration {
 
 		/*
 		 * As a user need to add Password rules At a minimum 8 characters And maximum
-		 * any character and should have at least one numeric number
+		 * any character and should have at least one numeric number Has exactly one
+		 * special char
 		 */
 		System.out.println("Enter Password");
 //		String Password = "[A-za-z0-9]{8}$";
 //		String Password = "((?=.*[A-Z]).{8,})";
-		String Password = "((?=.*[A-Z])(?=.*[0-9]).{8,})";
+//		String Password = "((?=.*[A-Z])(?=.*[0-9]).{8,})";
+		String Password = "((?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*_]).{8,})";
 		String inputPassword = scanner.next(); // Asdfg@12124 = ture, asdfgh@55 = false
 
 		UserRegistration userRegistration = new UserRegistration();
