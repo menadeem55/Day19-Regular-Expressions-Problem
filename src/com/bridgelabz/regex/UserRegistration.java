@@ -28,7 +28,8 @@ public class UserRegistration {
 		 * User need to enter a valid email to valid email is (abc.xyz@bl.co.in)
 		 */
 		System.out.println("Enter Email Id: ");
-		String emailId = "[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})";
+//		String emailId = "[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})";	//abc.xyz@bl.co.in
+		String emailId = "[a-zA-z0-9][a-zA-z0-9_.]*@[a-zA-Z0-9]+([.][a-zA-z]+)+"; // to provide all email
 		String inputEmailId = scanner.next(); // me.nadeem@gmail.com = ture, me.nadeem55@gmail.com = false
 
 		/*
@@ -49,7 +50,7 @@ public class UserRegistration {
 //		String Password = "((?=.*[A-Z]).{8,})";
 //		String Password = "((?=.*[A-Z])(?=.*[0-9]).{8,})";
 		String Password = "((?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*_]).{8,})";
-		String inputPassword = scanner.next(); // Asdfg@12124 = ture, asdfgh@55 = false
+		String inputPassword = scanner.next(); // Asdfg@12124 = ture, asdfgh@55 = false, at least one special char
 
 		UserRegistration userRegistration = new UserRegistration();
 		System.out.println(userRegistration.userName(firstName, input));
